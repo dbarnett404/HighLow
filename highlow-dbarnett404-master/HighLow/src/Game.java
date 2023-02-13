@@ -54,7 +54,12 @@ public class Game {
             //This lets the user input a number
             int guess = getGuess();
             if (guess == hiddenNum) {
+                System.out.println("Correct!");
                 correctGuess = true;
+            } else if (guess < hiddenNum) {
+                System.out.println("Higher");
+            } else {
+                System.out.println("Lower");
             }
             turnNo++;
         }
